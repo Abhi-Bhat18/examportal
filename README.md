@@ -41,7 +41,7 @@ EMAIL_PASSWORD = "<your-email-password>"
 CAPTCHA_SITE_KEY = "<captcha-sitekey>"
 CAPTCHA_SECRET_KEY = "<captcha-secretKey>"
 ```
-Note:Register your site in for reCaptcha[url(https://www.google.com/recaptcha/admin/create)] and get the site and secret key
+Note:Register your site in for [reCaptcha] (https://www.google.com/recaptcha/admin/create) and get the site and secret key
 
 Finally, start the client and server applications with the following commands:
 Frontend
