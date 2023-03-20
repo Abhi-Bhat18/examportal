@@ -1,8 +1,11 @@
 import Exam from "../models/examModel.js";
 
+// @desc: Get all the exams
+// @route: api/admin/xams
+// @method: GET
+// @access : admin
 export const getTests = async (req, res) => {
   try {
-    const userId = req.userId;
     const exams = await Exam.find({}).select(
       "title category city startTime endTime createdBy date description"
     );
@@ -16,6 +19,10 @@ export const getTests = async (req, res) => {
   }
 };
 
+// @desc: Create an Exam
+// @route: api/admin/createtest
+// @method: POST
+// @access : admin
 export const createTest = async (req, res) => {
   try {
     const { title, category, city, startTime, endTime, date, description } =
@@ -44,9 +51,15 @@ export const createTest = async (req, res) => {
   }
 };
 
+
+// @desc: Delete an Exam
+// @route: api/admin/exam/:id
+// @method: DELETE
+// @access : admin
+
 export const deleteTest = async (req, res) => {
   try {
-    const {id} = req.params
+    const { id } = req.params;
 
     const test = await Exam.deleteOne({ _id: id });
     if (!test) throw new Error("couldn't delete");

@@ -1,6 +1,10 @@
 import Exam from "../models/examModel.js";
 import User from "../models/userModel.js";
 
+// @desc: Get all the availabel exam
+// @route: api/exams
+// @method: POST
+// @access : user
 export const getExams = async (req, res) => {
   try {
     const exams = await Exam.find({}).select(
@@ -16,6 +20,10 @@ export const getExams = async (req, res) => {
   }
 };
 
+// @desc: Register for an exam
+// @route: api/user/register
+// @method: POST
+// @access : user
 export const register = async (req, res) => {
   try {
     const id = req.userId;
@@ -49,6 +57,11 @@ export const register = async (req, res) => {
   }
 };
 
+// @desc: get user details
+// @route: api/user
+// @method: GET
+// @access : user
+
 export const getuserDetails = async (req, res) => {
   try {
     const id = req.userId;
@@ -65,8 +78,10 @@ export const getuserDetails = async (req, res) => {
   }
 };
 
-// @desc: Remove candidate from exam and exam from user
-
+// @desc: withdraw candidate from exam and exam from user
+// @route: api/user/exam/:examId
+// @method: DELETE
+// @access : user
 export const withdrawRegistration = async (req, res) => {
   try {
     const userId = req.userId;
@@ -87,7 +102,7 @@ export const withdrawRegistration = async (req, res) => {
       {
         $pull: {
           candidates: {
-            userId
+            userId,
           },
         },
       }

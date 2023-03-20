@@ -7,7 +7,10 @@ import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 
 dotenv.config();
-
+// @desc: Register user
+// @route: api/auth/register
+// @method: POST
+// @access : public
 export const registerUser = async (req, res) => {
   try {
     const { email, firstName, lastName, contact, password } = req.body;
