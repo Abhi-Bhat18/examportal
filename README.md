@@ -3,7 +3,7 @@ This is an exam portal  web application
 
 This is a full-stack web application built with the MERN (MongoDB, Express, React, Node.js) stack that allows users to register for available exams and manage the registration and admin to create, delete and view the candidates registered for the exam.
 
-##Features
+## Features
 * User email verification.
 * User authentication and authorization using JWT tokens.
 * User profile page to manage registrations.
