@@ -3,6 +3,9 @@ This is an exam portal  web application
 
 This is a full-stack web application built with the MERN (MongoDB, Express, React, Node.js) stack that allows users to register for available exams and manage the registration and admin to create, delete and view the candidates registered for the exam.
 
+https://user-images.githubusercontent.com/86356896/226447612-2be850bb-eba5-40ba-a767-55f9c2ecfaca.mp4
+
+
 ## Features
 * User email verification.
 * User authentication and authorization using JWT tokens.
@@ -38,7 +41,7 @@ EMAIL_PASSWORD = "<your-email-password>"
 CAPTCHA_SITE_KEY = "<captcha-sitekey>"
 CAPTCHA_SECRET_KEY = "<captcha-secretKey>"
 ```
-Note:Register your site in for reCaptcha[https://www.google.com/recaptcha/admin/create] and get the site and secret key
+Note:Register your site in for reCaptcha[url(https://www.google.com/recaptcha/admin/create)] and get the site and secret key
 
 Finally, start the client and server applications with the following commands:
 Frontend
